@@ -28,7 +28,8 @@ export class BarrelCactus {
     // Random size up to 0.5 cowboys tall (cowboy is ~1.0 units tall)
     // Minimum 0.2 to ensure visibility, maximum 0.5 as specified
     // Reduced to 1/9 of original size (3x smaller than current)
-    this.size = config.size ?? ((0.2 + Math.random() * 0.3) / 9); // 0.022 to 0.056 (1/9 of original)
+    // Multiplied by 5 to make barrel cactus 5x bigger
+    this.size = config.size ?? ((0.2 + Math.random() * 0.3) / 9) * 5; // 0.11 to 0.28 (5x bigger)
 
     // Load the barrel cactus GLB model
     this.loadModel();
